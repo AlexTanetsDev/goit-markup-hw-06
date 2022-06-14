@@ -612,7 +612,7 @@ footer {
   left: 50%;
 
   max-width: 528px;
-  max-height: 581px;
+
   padding: 40px;
   display: flex;
 
@@ -656,18 +656,129 @@ footer {
   color: var(--main-title-color);
 }
 
-.request-name-label {
+.request-name-label,
+.request-tel-label,
+.request-email-label,
+.request-comment-label {
   display: block;
 
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
+  color: var(--main-text-color);
 
   margin-bottom: 4px;
 }
 
-.request-name-input {
+.request-name-input,
+.request-tel-input,
+.request-email-input {
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
   width: 100%;
+  padding-left: 42px;
+}
+.request-name-input:hover,
+.request-tel-input:hover,
+.request-email-input:hover {
+  border: 1px solid var(--main-accent-color);
+}
+.form-field {
+  position: relative;
+  margin-bottom: 10px;
+
+  color: var(--main-title-color);
+}
+
+.request-name-icon,
+.request-tel-icon,
+.request-email-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+}
+
+.request-name-input:hover + .request-name-icon,
+.request-name-input:focus + .request-name-icon,
+.request-tel-input:hover + .request-tel-icon,
+.request-tel-input:focus + .request-tel-icon,
+.request-email-input:hover + .request-email-icon,
+.request-email-input:focus + .request-email-icon {
+  fill: var(--main-accent-color);
+}
+
+.request-comment-area {
+  max-height: 120px;
+  width: 100%;
+  padding: 12px 16px;
+  resize: none;
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.request-comment-area:hover {
+  border: 1px solid var(--main-accent-color);
+}
+
+.request-comment-area::placeholder {
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.request-privacy-label {
+  display: flex;
+  align-items: center;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  margin-bottom: 30px;
+}
+.request-privacy-label > a {
+  color: var(--main-accent-color);
+  margin-left: 2px;
+}
+
+.request-privacy-icon {
+  width: 16px;
+  height: 15px;
+  display: inline-block;
+
+  margin-right: 8.8px;
+  background-image: url(../images/checkbox-icon.svg);
+}
+
+.request-privacy-input:checked + .request-privacy-icon {
+  width: 16px;
+  height: 15px;
+  display: inline-block;
+
+  margin-right: 8.8px;
+  background-image: url(../images/icon-check.svg);
+}
+
+.request-button {
+  display: block;
+  width: 200px;
+  height: 50px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  letter-spacing: 0.06em;
+  color: var(--main-white-color);
+
+  background-color: var(--main-accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  margin: 0 auto;
 }
 
 /* porfolio */
