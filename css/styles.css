@@ -640,8 +640,21 @@ footer {
   width: 30px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-
+  background-color: var(--main-white-color);
   cursor: pointer;
+
+  color: var(--main-title-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-icon {
+  fill: currentColor;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: var(--main-accent-color);
 }
 
 .request-title {
@@ -678,10 +691,15 @@ footer {
   border-radius: 4px;
   width: 100%;
   padding-left: 42px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .request-name-input:hover,
+.request-name-input:focus,
 .request-tel-input:hover,
-.request-email-input:hover {
+.request-tel-input:focus,
+.request-email-input:hover,
+.request-email-input:focus {
   border: 1px solid var(--main-accent-color);
 }
 .form-field {
@@ -697,6 +715,7 @@ footer {
   position: absolute;
   bottom: 11px;
   left: 12px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .request-name-input:hover + .request-name-icon,
@@ -717,9 +736,12 @@ footer {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.request-comment-area:hover {
+.request-comment-area:hover,
+.request-comment-area:focus {
   border: 1px solid var(--main-accent-color);
 }
 
@@ -732,6 +754,8 @@ footer {
 }
 
 .request-privacy-label {
+  position: relative;
+
   display: flex;
   align-items: center;
   line-height: 1.71;
@@ -745,23 +769,41 @@ footer {
 }
 
 .request-privacy-icon {
+  position: relative;
+  top: -2px;
+
+  opacity: 1;
+
   width: 16px;
   height: 15px;
   display: inline-block;
 
   margin-right: 8.8px;
-  background-image: url(../images/checkbox-icon.svg);
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.request-privacy-checked {
+  position: absolute;
+  top: 2px;
+
+  width: 16px;
+  height: 15px;
+  display: inline-block;
+
+  margin-right: 8.8px;
+  opacity: 0;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .request-privacy-input:checked + .request-privacy-icon {
-  width: 16px;
-  height: 15px;
-  display: inline-block;
-
-  margin-right: 8.8px;
-  background-image: url(../images/icon-check.svg);
+  opacity: 0;
 }
 
+.request-privacy-input:checked ~ .request-privacy-checked {
+  opacity: 1;
+}
 .request-button {
   display: block;
   width: 200px;
@@ -775,10 +817,17 @@ footer {
   color: var(--main-white-color);
 
   background-color: var(--main-accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: none;
   border-radius: 4px;
   border: none;
   margin: 0 auto;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.request-button:hover,
+.request-button:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* porfolio */
