@@ -697,15 +697,17 @@ footer {
   width: 100%;
   padding-left: 42px;
 
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.request-name-input:hover,
+
 .request-name-input:focus,
-.request-tel-input:hover,
 .request-tel-input:focus,
-.request-email-input:hover,
 .request-email-input:focus {
   border: 1px solid var(--main-accent-color);
+  outline: 1px solid var(--main-accent-color);
 }
 .form-field {
   position: relative;
@@ -723,11 +725,8 @@ footer {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.request-name-input:hover + .request-name-icon,
 .request-name-input:focus + .request-name-icon,
-.request-tel-input:hover + .request-tel-icon,
 .request-tel-input:focus + .request-tel-icon,
-.request-email-input:hover + .request-email-icon,
 .request-email-input:focus + .request-email-icon {
   fill: var(--main-accent-color);
 }
@@ -742,12 +741,13 @@ footer {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.request-comment-area:hover,
 .request-comment-area:focus {
   border: 1px solid var(--main-accent-color);
+  outline: 1px solid var(--main-accent-color);
 }
 
 .request-comment-area::placeholder {
@@ -769,6 +769,8 @@ footer {
 
   margin-bottom: 30px;
   margin-left: 12px;
+
+  cursor: pointer;
 }
 .request-privacy-label > a {
   color: var(--main-accent-color);
@@ -835,6 +837,7 @@ footer {
 .request-button:hover,
 .request-button:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 /* porfolio */
