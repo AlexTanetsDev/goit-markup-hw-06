@@ -459,6 +459,7 @@ footer {
 
 .footer {
   display: flex;
+  align-items: baseline;
 }
 
 .adress-cotain {
